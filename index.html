@@ -114,6 +114,65 @@
                     </div>
                 </div>
 
+                <div class="field" role="group" aria-labelledby="session-format-label">
+                    <p class="group-label" id="session-format-label">Session format (required)</p>
+                    <div class="choice-group">
+                        <label class="choice"><input type="checkbox" name="session-format" value="virtual">Virtual livestream</label>
+                        <label class="choice"><input type="checkbox" name="session-format" value="in-person">In-person performance</label>
+                        <label class="choice"><input type="checkbox" name="session-format" value="interview">Short interview segment</label>
+                    </div>
+                </div>
+
+                <div class="field" role="group" aria-labelledby="availability-window-label">
+                    <p class="group-label" id="availability-window-label">Availability window (required)</p>
+                    <div class="choice-group">
+                        <label class="choice"><input type="radio" name="availability-window" value="weekday-evening" required>Weekday evening</label>
+                        <label class="choice"><input type="radio" name="availability-window" value="weekend-afternoon" required>Weekend afternoon</label>
+                        <label class="choice"><input type="radio" name="availability-window" value="weekend-evening" required>Weekend evening</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="details">Request details (required)</label>
+                    <p class="help" id="details-help">Share the event goals, timing, audience, and any technical needs.</p>
+                    <textarea id="details" name="details" aria-describedby="details-help" required></textarea>
+                </div>
+
+                <div class="field">
+                    <label class="choice checkbox-choice" for="consent">
+                        <input id="consent" name="consent" type="checkbox" required>
+                        I confirm that this request uses fictional test information only and that I understand the team will review it for a follow-up.
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Send inquiry</button>
+        </form>
+
+        <section id="requirements">
+                <h2>F4 · Requirements and Validation</h2>
+                <div class="requirements-grid">
+                    <div>
+                        <h3>Submission requirements</h3>
+                        <ul>
+                            <li>Use a valid email.</li>
+                            <li>Choose at least one session format and one availability window.</li>
+                            <li>Enter a preferred date and an audience.</li>
+                            <li>Provide details so the team has context.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Helpful examples</h3>
+                        <ul>
+                            <li>Email example: name@example.com</li>
+                            <li>Phone example: (100) 100-0100</li>
+                            <li>Audience example: 100</li>
+                            <li>Request example: "We are planning a live event…"</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
 
                 <label class="choice">
                     <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
