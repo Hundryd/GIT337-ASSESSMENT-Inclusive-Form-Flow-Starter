@@ -44,9 +44,40 @@ img {
     color: #fff;
 }
 
+.page-header-inner {
+    max-width: 62rem;
+    margin:0 auto;
+}
+
+.brand-block {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:1rem;
+    flex-wrap:wrap;
+}
+
+.brand-logo {
+    width:8rem;
+    height:auto;
+    border-radius:1rem;
+    background:rgba(255,255,255,0.15);
+    padding:.45rem;
+    filter:grayscale(1);
+}
+
 .eyebrow {
     color: var(--color-accent);
     font-weight: 700;
+}
+
+h1, h2, h3, legend, label {
+    line-height:1.2;
+}
+
+h1 {
+    margin:0;
+    font-size:clamp(2.2rem, 4vw, 4rem);
 }
 
 .lede {
@@ -63,6 +94,20 @@ main {
 section,
 form {
     margin-block: 2rem;
+}
+
+section {
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(124,112,116,0.3);
+    border-radius:var(--radius);
+    padding:clamp(1.1rem, 2vw, 1.8rem);
+}
+
+.expectations-grid,
+.requirements-grid,
+.evidence-grid {
+    display:grid;
+    gap:1rem;
 }
 
 form,
