@@ -79,7 +79,42 @@
             
             <fieldset>
                 <legend>F3 · Request choices</legend>
-                <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                <p class="help">Choose the form that best fits your needs and provide enough detail for a reply.</p>
+
+                <div class="paired-fields">
+                    <div class="field">
+                        <label for="event-type">Event type (required)</label>
+                        <select id="event-type" name="event-type" required>
+                            <option value="">Select one</option>
+                            <option value="live-session">Live session</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="interview">Interview</option>
+                    </div>
+
+                    <div class="field">
+                        <label for="preferred-date">Preferred date (required)</label>
+                        <input id="preferred-date" name="preferred-date" type="date" required>
+                    </div>
+                </div>
+
+                <div class="paired-fields">
+                    <div class="field">
+                        <label for="audience-size">Audience size (optional)</label>
+                        <input id="audience-size" name="audience-size" type="number" min="1">
+                    </div>
+
+                    <div class="field">
+                        <label for="budget-range">Budget range</label>
+                        <select id="budget-range" name="budget-range">
+                            <option value="">Select one</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="over-5000">$5,000+</option>
+                        </select>
+                    </div>
+                </div>
+
+
                 <label class="choice">
                     <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
                 <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option
