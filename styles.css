@@ -138,6 +138,16 @@ label {
     color: var(--color-muted);
 }
 
+.group-label {
+    margin: 0;
+    font-weight: 700;
+}
+
+.choice-group {
+    display: grid;
+    gap: .35rem;
+}
+
 input,
 select,
 textarea,
@@ -194,7 +204,8 @@ button:hover {
 }
 
 .error-summary,
-.field-error {
+.field-error,
+.field-disabled {
     padding: 1rem;
     border-left: .4rem solid var(--color-error);
     background: #fff1f0;
@@ -202,6 +213,19 @@ button:hover {
 
 .field-error input {
     border-color: var(--color-error);
+}
+
+.field-disabled input {
+    background: #f3f3f3;
+    border-style: dashed;
+    color: var(--color-muted);
+}
+
+.state-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 1rem;
 }
 
 button:disabled {
