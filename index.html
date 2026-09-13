@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <h3>Time expectations</h3>
-                    <p>It should take about 5-10 minutes to complete this form.</p>
+                    <p>It should take about 2-3 minutes to complete this form.</p>
                 </div>
             </div>
             <ul class="expectations-list">
@@ -50,16 +50,33 @@
         <form action="" method="get">
             <fieldset>
                 <legend>F3 · Contact information</legend>
-                <p class="help">Replace or extend this group based on your justified field inventory.</p>
-                <div class="field">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" autocomplete="name">
+                <p class="help">Tell us who is making the request and how our team can reach them.</p>
+
+                <div class="paired-fields">
+                    <div class="field">
+                        <label for="full-name">Full name (required)</label>
+                        <input id="full-name" name="full-name" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="organization">Organization name (optional)</label>
+                        <input id="organization" name="organization" type="text" autocomplete="organization">
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="email">Email address (required)</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
+
+                <div class="paired-fields">
+                    <div class="field">
+                        <label for="email">Email address (required)</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone number (optional)</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel">
+                    </div>
                 </div>
             </fieldset>
+            
             <fieldset>
                 <legend>F3 · Request choices</legend>
                 <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
