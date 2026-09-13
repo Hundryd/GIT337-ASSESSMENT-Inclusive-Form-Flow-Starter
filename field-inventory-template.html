@@ -1,61 +1,179 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Field Inventory</title>
-        <style>
-        body{
-            font-family:Arial,sans-serif;
-            line-height:1.5;
-            max-width:80rem;
-            margin:auto;
-            padding:1rem;
-            color:#191919;
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 80rem;
+            margin: auto;
+            padding: 1rem;
+            color: #191919;
         }
-        table{
-            width:100%;
-            border-collapse:collapse;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        th,td{
-            padding:.6rem;
-            border:1px solid #999;
-            text-align:left;
-            vertical-align:top;
+
+        th,
+        td {
+            padding: .6rem;
+            border: 1px solid #999;
+            text-align: left;
+            vertical-align: top;
         }
-        th{
-            background:#f1f1f1;
+
+        th {
+            background: #f1f1f1;
         }
-        </style>
-        </head>
-        <body>
-            <h1>F2 · Task and Data Plan</h1>
-            <p>Duplicate rows as needed. Justify every collected value.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Visible label / question</th>
-                        <th>Why necessary now?</th>
-                        <th>Required?</th>
-                        <th>Native control/type</th>
-                        <th>Submitted name/value</th>
-                        <th>Autocomplete/inputmode</th>
-                        <th>Constraint/instruction</th>
-                        <th>Sensitivity and minimization decision</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
-                    </tr>
-                </tbody>
-            </table>
-        </body>
-        </html>
+    </style>
+</head>
+
+<body>
+    <h1>F2 · Task and Data Plan</h1>
+    <p>Completed field inventory for the Hundryd live booking inquiry form.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Visible label / question</th>
+                <th>Why necessary now?</th>
+                <th>Required?</th>
+                <th>Native control/type</th>
+                <th>Submitted name/value</th>
+                <th>Autocomplete/inputmode</th>
+                <th>Constraint/instruction</th>
+                <th>Sensitivity and minimization decision</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Full name</td>
+                <td>Used to identify the person making the request and to personalize the response.</td>
+                <td>Yes</td>
+                <td>Text input</td>
+                <td>full-name</td>
+                <td>name</td>
+                <td>Required; 2-80 characters</td>
+                <td>Only the minimum necessary personal contact detail for a reply is collected.</td>
+            </tr>
+            <tr>
+                <td>Organization name</td>
+                <td>Helps identify the venue, team, or group behind the booking request.</td>
+                <td>No</td>
+                <td>Text input</td>
+                <td>organization</td>
+                <td>organization</td>
+                <td>Optional; up to 80 characters</td>
+                <td>Optional business or group identification only; no sensitive personal data is requested.</td>
+            </tr>
+            <tr>
+                <td>Email address</td>
+                <td>Needed so the Hundryd team can send a confirmation or follow-up.</td>
+                <td>Yes</td>
+                <td>Email input</td>
+                <td>email</td>
+                <td>email</td>
+                <td>Required; must be a valid email address</td>
+                <td>Contact information is collected only for the purpose of follow-up communication.</td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td>Useful if the team needs a fast scheduling or logistics follow-up.</td>
+                <td>No</td>
+                <td>Tel input</td>
+                <td>phone</td>
+                <td>tel</td>
+                <td>Optional; can be left blank if not applicable</td>
+                <td>Only a secondary contact method is requested, and it is not required for every inquiry.</td>
+            </tr>
+            <tr>
+                <td>Event type</td>
+                <td>Lets the team understand the kind of booking being requested.</td>
+                <td>Yes</td>
+                <td>Select menu</td>
+                <td>event-type</td>
+                <td>N/A</td>
+                <td>Required; one option must be selected</td>
+                <td>General request category only; no sensitive information is collected.</td>
+            </tr>
+            <tr>
+                <td>Preferred date</td>
+                <td>Needed to assess scheduling availability and timing.</td>
+                <td>Yes</td>
+                <td>Date input</td>
+                <td>preferred-date</td>
+                <td>N/A</td>
+                <td>Required; must be a valid date</td>
+                <td>Date is relevant only to planning the booking and is not used for unrelated purposes.</td>
+            </tr>
+            <tr>
+                <td>Audience size</td>
+                <td>Helps estimate scale, logistics, and production needs.</td>
+                <td>No</td>
+                <td>Number input</td>
+                <td>audience-size</td>
+                <td>N/A</td>
+                <td>Optional; use a whole number</td>
+                <td>This is a planning estimate rather than a personal identifier.</td>
+            </tr>
+            <tr>
+                <td>Budget range</td>
+                <td>Useful for understanding expected scope and planning conversations.</td>
+                <td>No</td>
+                <td>Select menu</td>
+                <td>budget-range</td>
+                <td>N/A</td>
+                <td>Optional; choose the closest range if known</td>
+                <td>Only broad budget category is requested; no detailed financial data is collected.</td>
+            </tr>
+            <tr>
+                <td>Session format</td>
+                <td>Identifies the kind of event format the requester needs.</td>
+                <td>Yes</td>
+                <td>Checkbox group</td>
+                <td>session-format</td>
+                <td>N/A</td>
+                <td>Choose at least one option</td>
+                <td>Only service preference information is gathered for the booking request.</td>
+            </tr>
+            <tr>
+                <td>Availability window</td>
+                <td>Helps the team determine the best scheduling option.</td>
+                <td>Yes</td>
+                <td>Radio button group</td>
+                <td>availability-window</td>
+                <td>N/A</td>
+                <td>One option must be selected</td>
+                <td>Timing preference is a necessary logistics detail for the request.</td>
+            </tr>
+            <tr>
+                <td>Request details</td>
+                <td>Provides context for the booking request, such as goals, timing, and technical needs.</td>
+                <td>Yes</td>
+                <td>Textarea</td>
+                <td>details</td>
+                <td>N/A</td>
+                <td>Required; provide enough description for review</td>
+                <td>Free-text content is limited to the booking request and is not more personal than necessary.</td>
+            </tr>
+            <tr>
+                <td>Fictional information confirmation</td>
+                <td>Confirms the prototype is being used with fictional, non-real information only.</td>
+                <td>Yes</td>
+                <td>Checkbox</td>
+                <td>consent</td>
+                <td>N/A</td>
+                <td>Required; must be checked to submit</td>
+                <td>This protects the assignment boundary and avoids accidental collection of real data.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
